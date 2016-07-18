@@ -4,4 +4,4 @@ Development Setup
 2. run `npm install` in the project root directory.
 3. run `grunt watch` while editing .jsx or .scss files in the root directory.
 4. visit `localhost/algolia_project`.
-5. search some best buy data!
+5. search some BestBuy data!
