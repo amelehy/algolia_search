@@ -1,41 +1,18 @@
-<!-- <!doctype html>
-<html>
-<head>
-  <script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.jquery.min.js"></script>
-</head>
-<body>
-  <script>
-    var client = $.algolia.Client('IPQITGZMEV', '869bcfea95a439b819bbf013fac36dee');
-    var index = client.initIndex('best buy');
-    index.search('A', function searchDone(err, results) {
-      if (err) {
-        throw err;
-      }
-      console.log('We got `' + results.nbHits + '` results');
-      console.log('Here is the first one: ', results.hits[0]);
-    });
-  </script>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css" />
     <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.jquery.min.js"></script>
-    <script src="bower_components/react/react.js"></script>
-    <script src="bower_components/react/react-dom.js"></script>
+    <script src="node_modules/react/dist/react.min.js"></script>
+    <script src="node_modules/react-dom/dist/react-dom.min.js"></script>
     <script src="bower_components/babel/index.js"></script>
   </head>
   <body>
-    <div id="container"></div>
-    <input type="text" id="search-box"/>
-    <div id="hits-container"></div>
-    <div id="pagination-container"></div>
+    <div id="container" class="container-fluid"></div>
   </body>
-  <script type="text/babel" src="js/build/application.js"></script>
+  <script type="text/babel" src="js/build/application.min.js"></script>
 </html>

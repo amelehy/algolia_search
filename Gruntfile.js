@@ -1,8 +1,9 @@
 module.exports = function(grunt) {
 
   var jsCompiledDir = 'js/build/';
-  var jsSourceDir = 'js/source';
-  var applicationJsName = jsCompiledDir + 'application.js';
+  var jsSourceDir = 'js/source/';
+  var jsCompiledDirTmp = 'js/build/tmp/';
+  var applicationJsName = jsCompiledDir + 'application.min.js';
   // var jsLibs = ['bower_components/react/react.min.js', 'bower_components/react/react-dom.min.js', 'bower_components/babel/index.js']
   var jsLibs = [];
 
@@ -18,7 +19,7 @@ module.exports = function(grunt) {
         }
       } 
     },
-    // clean: [applicationJsName],
+    clean: [jsCompiledDirTmp],
     babel: {
       options: {
         plugins: ['transform-react-jsx'],
@@ -29,7 +30,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: jsSourceDir, 
           src: ['**/*.jsx'],
-          dest: jsCompiledDir, 
+          dest: jsCompiledDirTmp, 
           ext: '.js'
         }]
       }
@@ -39,7 +40,7 @@ module.exports = function(grunt) {
         separator: '',
       },
       dist: {
-        src: [jsCompiledDir + '**/*.js'].concat(jsLibs),
+        src: [jsCompiledDirTmp + '**/*.js'].concat(jsLibs),
         dest: applicationJsName,
       },
     },
@@ -50,18 +51,15 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      options: {
-        livereload: true
-      },
       scripts: {
-        files: [jsSourceDir + '**/*.jsx'],
-        tasks: ['babel', 'concat', 'uglify'],
+        files: [jsSourceDir + '**/*.jsx', jsSourceDir + '**/*.js'],
+        tasks: ['babel', 'concat', 'uglify', 'clean'],
         options: {
           spawn: false
         },
       }, 
       css: {
-        files: ['css/*.scss'],
+        files: ['css/**/*.scss'],
         tasks: ['sass'],
         options: {
           spawn: false
@@ -71,7 +69,7 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-babel');
-  // grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
