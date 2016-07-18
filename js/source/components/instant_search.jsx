@@ -63,7 +63,7 @@ var InstantSearch = React.createClass({
       price = {data.price}
       description = {data.description}
       deeplink = {data.url}
-      />;
+    />;
   },
   render: function() {
     return (
