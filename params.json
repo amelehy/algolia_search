@@ -1,6 +1,6 @@
 {
   "name": "Algolia Search",
   "tagline": "Algolia Ecommerce Search",
-  "body": "### What is this?\r\nHi all! Here you'll find an an example of a quick and dirty e-commerce search experience using Algolia and a sample BestBuy dataset. \r\n\r\n### What's it made of?\r\nThe implementation uses:\r\n* The AlgoliaSearch JS API\r\n* Algolia instantsearch.js\r\n* React\r\n* Bootstrap SASS\r\n* Grunt as a build tool\r\n\r\n### Support or Contact\r\nIf you want to know more feel free to reach out! \r\n",
+  "body": "### What is this?\r\nHi all! Here you'll find an an example of a quick and dirty e-commerce search experience using [Algolia](https://www.algolia.com/) and a sample BestBuy dataset. \r\n\r\n### What's it made of?\r\nThe implementation uses:\r\n* [The AlgoliaSearch JS API](https://www.algolia.com/doc/api-client/javascript#install-and-init)\r\n* [Algolia instantsearch.js](https://community.algolia.com/instantsearch.js/)\r\n* React\r\n* Bootstrap SASS\r\n* Grunt as a build tool\r\n\r\n### Support or Contact\r\nIf you want to know more feel free to reach out! \r\n",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
