@@ -4,8 +4,6 @@ module.exports = function(grunt) {
   var jsSourceDir = 'js/source/';
   var jsCompiledDirTmp = 'js/build/tmp/';
   var applicationJsName = jsCompiledDir + 'application.min.js';
-  // var jsLibs = ['bower_components/react/react.min.js', 'bower_components/react/react-dom.min.js', 'bower_components/babel/index.js']
-  var jsLibs = [];
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -40,7 +38,7 @@ module.exports = function(grunt) {
         separator: '',
       },
       dist: {
-        src: [jsCompiledDirTmp + '**/*.js'].concat(jsLibs),
+        src: [jsCompiledDirTmp + '**/*.js'],
         dest: applicationJsName,
       },
     },
