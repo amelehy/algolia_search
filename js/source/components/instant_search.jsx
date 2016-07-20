@@ -14,7 +14,7 @@ var InstantSearch = React.createClass({
     this.initSearch();
   },
   initSearch: function(){
-    var searchHandle = instantsearch({
+    let searchHandle = instantsearch({
       appId: this.config.appId,
       apiKey: this.config.apiKey,
       indexName: this.config.indexName,
@@ -26,7 +26,7 @@ var InstantSearch = React.createClass({
     searchHandle.start();
   },
   initSearchBoxWidget: function(searchHandle){
-    var _this = this;
+    let _this = this;
     searchHandle.addWidget(
       instantsearch.widgets.searchBox({
         container: _this.config.searchBoxId,
@@ -37,7 +37,7 @@ var InstantSearch = React.createClass({
     );
   },
   initHitsWidget: function(searchHandle){
-    var _this = this;
+    let _this = this;
     searchHandle.addWidget(
       instantsearch.widgets.hits({
         container: _this.config.hitsId,
@@ -49,7 +49,7 @@ var InstantSearch = React.createClass({
     );
   },
   initPaginationWidget: function(searchHandle){
-    var _this = this;
+    let _this = this;
     searchHandle.addWidget(
       instantsearch.widgets.pagination({
         container: _this.config.paginationId
